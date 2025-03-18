@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let form = document.querySelector('form')
+    let form = document.getElementById('create-task-form')
     form.addEventListener('submit', (e) =>{
        e.preventDefault();
 
-       let todoText = document.getElementById("to_do").value;
+       let todoText = document.getElementById("new-task-description").value;
        let priority = document.getElementById("priority").value;
        let dueDate = document.getElementById("due_date").value;
 
