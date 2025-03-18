@@ -22,7 +22,7 @@ button {
   flex-direction: column;
   border: 1px solid #333;
   background: rgba(255, 255, 255, 0.3);
-  padding: 15px 20px 18px 18px;
+  padding: 20px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
 }
@@ -34,4 +34,36 @@ button {
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
+}
+
+#tasks p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+/*Due Date Styling */
+#tasks p span {
+  font-size: 10px;
+  font-weight: normal;
+  margin-left: 10px;
+  color: #333;
+}
+
+button {
+  font-size: 12px; /* Increase size for readability */
+  padding: 6px 10px;
+  border: 2px solid red;
+  background: white;
+  color: red;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 7px;
 }

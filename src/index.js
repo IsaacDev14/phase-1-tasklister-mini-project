@@ -5,20 +5,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
        let todoText = document.getElementById("to_do").value;
        let priority = document.getElementById("priority").value;
+       let dueDate = document.getElementById("due_date").value;
 
        if (todoText.trim() === "") {
         alert("Task description cannot be empty!");
         return;
         }
 
-       buildToDo(todoText, priority);
+       buildToDo(todoText, priority, dueDate);
        form.reset()
     })
 });
 
-function buildToDo(todo, priority){
+function buildToDo(todo, priority, dueDate){
     let p = document.createElement('p');
     let btn = document.createElement('button');
+    
 
     if(priority === "high"){
         p.style.backgroundColor = "green"
@@ -31,7 +33,7 @@ function buildToDo(todo, priority){
     btn.addEventListener('click', handleDelete);
     btn.textContent = 'delete';
     btn.style.color = "red"
-    p.textContent = `${todo} `;
+    p.textContent = `${todo} (Due: ${dueDate})`;
     p.appendChild(btn);
     document.querySelector('#tasks').appendChild(p)
 }
